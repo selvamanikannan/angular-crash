@@ -1,5 +1,14 @@
-<h1 [class.grey]="h1Style ">Home</h1> 
+<!-- <h1 [ngClass]="
+{
+  'grey': h1Style,
+  'large': !h1Style
+} " >Home</h1>  -->
 
-<h1 [class.grey]="h1Style ">Home</h1> 
+<!-- <h1 [style.color]="h1Style ? 'grey':'black'">Home</h1> -->
 
-<button (focus)="firstClick()">Click Me</button>
+<h1 [ngStyle]="{
+  'color': h1Style ? 'grey' : 'black',
+  'font-size': h1Style ? '1em' : '4em'
+}">Home</h1>
+
+<button (click)="firstClick()">Click Me</button>
